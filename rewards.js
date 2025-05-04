@@ -68,7 +68,7 @@ function getDefaultRewards() {
             description: '完成任务后犒劳自己，享受小零食',
             points: 10,
             image: 'images/snack.jpg',
-            stock: 5
+            stock: 100
         },
         {
             id: 2,
@@ -76,7 +76,7 @@ function getDefaultRewards() {
             description: '放松心情，享受奶茶',
             points: 25,
             image: 'images/milk-tea.jpg',
-            stock: 3
+            stock: 100
         },
         {
             id: 3,
@@ -84,7 +84,7 @@ function getDefaultRewards() {
             description: '元宝穿上漂亮衣服，美美哒',
             points: 60,
             image: 'images/beautiful-clothes.jpg',
-            stock: 10
+            stock: 100
         },
         {
             id: 4,
@@ -92,7 +92,7 @@ function getDefaultRewards() {
             description: '元宝可以自由指定礼物哦！！！',
             points: 80,
             image: 'images/free-gift.jpg',
-            stock: 1
+            stock: 100
         },
         {
             id: 5,
@@ -100,7 +100,7 @@ function getDefaultRewards() {
             description: '元宝专属面膜一盒',
             points: 40,
             image: 'images/mask.jpg',
-            stock: 2
+            stock: 100
         },
         {
             id: 6,
@@ -108,7 +108,7 @@ function getDefaultRewards() {
             description: '可以带元宝出去玩哦！！！',
             points: 200,
             image: 'images/play.jpg',
-            stock: 1
+            stock: 100
         },
         {
             id: 7,
@@ -116,7 +116,7 @@ function getDefaultRewards() {
             description: '嘿嘿嘿',
             points: 100,
             image: 'images/sleep.jpg',
-            stock: 1
+            stock: 100
         },
         {
             id: 8,
@@ -124,7 +124,7 @@ function getDefaultRewards() {
             description: '实现所有愿望',
             points: 1000,
             image: 'images/success.jpg',
-            stock: 1
+            stock: 100
         }
     ];
 }
