@@ -1,0 +1,175 @@
+/* 积分汇总页面样式 */
+.points-container {
+    margin: 20px;
+}
+
+/* 积分概览卡片 */
+.points-overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.overview-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1E3A8A;
+}
+
+/* 第三个卡片颜色区分 */
+.overview-card:nth-child(3) .card-value {
+    color: #f44336;
+}
+
+/* 积分图表部分 */
+.points-chart-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chart-toolbar {
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chart-period {
+    display: flex;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.period-btn {
+    background: none;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.period-btn.active {
+    background-color: #1E3A8A;
+    color: white;
+}
+
+.chart-container {
+    height: 300px;
+    margin-top: 20px;
+}
+
+/* 最近活动列表 */
+.recent-activities {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.activities-list {
+    margin-top: 15px;
+}
+
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.activity-time {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+.activity-points {
+    font-weight: bold;
+}
+
+.points-positive {
+    color: #4caf50;
+}
+
+.points-negative {
+    color: #f44336;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .points-overview {
+        flex-direction: column;
+    }
+    
+    .overview-card {
+        margin-bottom: 15px;
+    }
+}
+
+/* 新增样式 */
+.points-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px 20px 20px;
+}
+
+.action-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.action-btn:hover {
+    background-color: #d32f2f;
+}
+
+.activities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+} 

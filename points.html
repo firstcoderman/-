@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>积分汇总 - 元宝宝考公上岸闯关计划</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="points.css">
+</head>
+<body>
+    <header>
+        <div class="logo">元宝宝考公上岸闯关计划</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">任务管理</a></li>
+                <li><a href="rewards.html">奖励兑换</a></li>
+                <li class="active"><a href="points.html">积分汇总</a></li>
+                <li><a href="history.html">详细历史</a></li>
+            </ul>
+        </nav>
+        <div class="status">
+            <div id="current-date"></div>
+            <div id="total-points"><span id="points-value">0</span>积分</div>
+        </div>
+    </header>
+
+    <div class="motto">
+        <p>"元宝宝你一定可以的"</p>
+        <p class="user-name">—— 胡鑫</p>
+    </div>
+
+    <div class="points-container">
+        <div class="points-overview">
+            <div class="overview-card">
+                <div class="card-title">当前积分</div>
+                <div class="card-value" id="current-points">0</div>
+            </div>
+            <div class="overview-card">
+                <div class="card-title">累计获得</div>
+                <div class="card-value" id="total-earned">0</div>
+            </div>
+            <div class="overview-card">
+                <div class="card-title">累计消费</div>
+                <div class="card-value" id="total-spent">0</div>
+            </div>
+        </div>
+        
+        <div class="points-actions">
+            <button id="reset-points" class="action-btn">重置所有积分</button>
+        </div>
+
+        <div class="points-chart-section">
+            <h2>积分趋势</h2>
+            <div class="chart-toolbar">
+                <div class="chart-period">
+                    <button class="period-btn active" data-period="week">本周</button>
+                    <button class="period-btn" data-period="month">本月</button>
+                    <button class="period-btn" data-period="year">全年</button>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="points-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="recent-activities">
+            <div class="activities-header">
+                <h2>最近活动</h2>
+                <button id="clear-activities" class="action-btn">清空活动记录</button>
+            </div>
+            <div class="activities-list" id="recent-activities-list">
+                <!-- 最近活动将通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="points.js"></script>
+</body>
+</html> 

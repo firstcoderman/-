@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详细历史 - 元宝宝考公上岸闯关计划</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="history.css">
+</head>
+<body>
+    <header>
+        <div class="logo">元宝宝考公上岸闯关计划</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">任务管理</a></li>
+                <li><a href="rewards.html">奖励兑换</a></li>
+                <li><a href="points.html">积分汇总</a></li>
+                <li class="active"><a href="history.html">详细历史</a></li>
+            </ul>
+        </nav>
+        <div class="status">
+            <div id="current-date"></div>
+            <div id="total-points"><span id="points-value">0</span>积分</div>
+        </div>
+    </header>
+
+    <div class="motto">
+        <p>"元宝宝你一定可以的"</p>
+        <p class="user-name">—— 胡鑫</p>
+    </div>
+
+    <div class="history-container">
+        <div class="history-header">
+            <h2>详细历史记录</h2>
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="action-filter">操作类型:</label>
+                    <select id="action-filter">
+                        <option value="all">全部</option>
+                        <option value="完成任务">完成任务</option>
+                        <option value="添加任务">添加任务</option>
+                        <option value="放弃任务">放弃任务</option>
+                        <option value="兑换奖励">兑换奖励</option>
+                        <option value="重置任务">重置任务</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="date-filter">时间范围:</label>
+                    <select id="date-filter">
+                        <option value="all">全部时间</option>
+                        <option value="today">今天</option>
+                        <option value="week">本周</option>
+                        <option value="month">本月</option>
+                    </select>
+                </div>
+                <button id="clear-filter">清除筛选</button>
+            </div>
+        </div>
+
+        <div class="history-actions">
+            <button id="clear-history" class="action-btn">清除所有历史记录</button>
+        </div>
+
+        <div class="history-stats">
+            <div class="stat-card">
+                <div class="stat-title">总记录数</div>
+                <div class="stat-value" id="total-records">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">任务完成</div>
+                <div class="stat-value" id="completed-tasks">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">奖励兑换</div>
+                <div class="stat-value" id="exchanged-rewards">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">积分变化</div>
+                <div class="stat-value" id="points-change">0</div>
+            </div>
+        </div>
+
+        <div class="history-table-container">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>时间</th>
+                        <th>操作类型</th>
+                        <th>名称</th>
+                        <th>积分变化</th>
+                    </tr>
+                </thead>
+                <tbody id="history-table-body">
+                    <!-- 历史记录将通过JS动态生成 -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination" id="pagination">
+            <!-- 分页控件将通过JS动态生成 -->
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+</html> 

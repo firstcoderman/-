@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元宝宝考公上岸闯关计划</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">元宝宝考公上岸闯关计划</div>
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">任务管理</a></li>
+                <li><a href="rewards.html">奖励兑换</a></li>
+                <li><a href="points.html">积分汇总</a></li>
+                <li><a href="history.html">详细历史</a></li>
+            </ul>
+        </nav>
+        <div class="status">
+            <div id="current-date">2025年5月4日 星期日 12:29</div>
+            <div id="total-points"><span id="points-value">0</span>积分</div>
+        </div>
+    </header>
+
+    <div class="motto">
+        <p>"元宝你一定可以的"</p>
+        <p class="user-name">—— 胡鑫</p>
+    </div>
+
+    <div class="task-panel">
+        <div class="panel-header">
+            <h2>今日任务</h2>
+            <div class="buttons">
+                <button id="reset-tasks">重置任务</button>
+                <button id="add-task">添加任务</button>
+            </div>
+        </div>
+
+        <div class="task-lists">
+            <div class="task-group">
+                <div class="group-header">
+                    <h3>未完成任务</h3>
+                    <span class="toggle-btn">▼</span>
+                </div>
+                <div class="task-items" id="pending-tasks">
+                    <!-- 任务将通过JS动态生成 -->
+                </div>
+            </div>
+
+            <div class="task-group">
+                <div class="group-header">
+                    <h3>已完成任务</h3>
+                    <span class="toggle-btn">▲</span>
+                </div>
+                <div class="task-items" id="completed-tasks" style="display: none;">
+                    <!-- 已完成任务将通过JS动态生成 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加任务模态框 -->
+    <div id="add-task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>添加任务</h2>
+            <div class="task-selection">
+                <div class="form-group">
+                    <select id="task-select" class="task-select">
+                        <option value="">-- 选择一个预设任务 --</option>
+                        <!-- 预设任务列表将通过JS动态生成 -->
+                    </select>
+                </div>
+                <div class="task-custom">
+                    <p>或者</p>
+                    <button id="custom-task-btn">创建自定义任务</button>
+                </div>
+            </div>
+            
+            <form id="task-form" style="display: none;">
+                <div class="form-group">
+                    <label for="task-name">任务名称:</label>
+                    <input type="text" id="task-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-description">任务描述:</label>
+                    <input type="text" id="task-description">
+                </div>
+                <div class="form-group">
+                    <label for="task-points">积分值:</label>
+                    <input type="number" id="task-points" min="1" value="5" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-category">分类:</label>
+                    <select id="task-category">
+                        <option value="学习">学习</option>
+                        <option value="作息">作息</option>
+                        <option value="偷懒">偷懒</option>
+                        <option value="其他">其他</option>
+                    </select>
+                </div>
+                <button type="submit">保存</button>
+            </form>
+            
+            <div class="form-actions">
+                <button id="add-selected-task" class="green-btn">添加到今日任务</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 

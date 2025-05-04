@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奖励兑换 - 元宝宝考公上岸闯关计划</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rewards.css">
+</head>
+<body>
+    <header>
+        <div class="logo">元宝宝考公上岸闯关计划</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">任务管理</a></li>
+                <li class="active"><a href="rewards.html">奖励兑换</a></li>
+                <li><a href="points.html">积分汇总</a></li>
+                <li><a href="history.html">详细历史</a></li>
+            </ul>
+        </nav>
+        <div class="status">
+            <div id="current-date"></div>
+            <div id="total-points"><span id="points-value">0</span>积分</div>
+        </div>
+    </header>
+
+    <div class="motto">
+        <p>"元宝宝你一定可以的"</p>
+        <p class="user-name">—— 胡鑫</p>
+    </div>
+
+    <div class="rewards-container">
+        <h2>奖励兑换</h2>
+        <p class="reward-intro">用你辛苦赚取的积分兑换以下奖励，加油！</p>
+        
+        <div class="rewards-grid" id="rewards-list">
+            <!-- 奖励项将通过JS动态生成 -->
+        </div>
+    </div>
+
+    <!-- 兑换确认模态框 -->
+    <div id="exchange-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>确认兑换</h2>
+            <div id="reward-details">
+                <p>奖励名称: <span id="exchange-name"></span></p>
+                <p>所需积分: <span id="exchange-points"></span></p>
+            </div>
+            <div class="confirm-buttons">
+                <button id="confirm-exchange" class="green-btn">确认兑换</button>
+                <button id="cancel-exchange" class="red-btn">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="rewards.js"></script>
+</body>
+</html> 
